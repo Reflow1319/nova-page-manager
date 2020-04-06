@@ -82,7 +82,7 @@ class PageResource extends Resource
                 ->exceptOnForms(),
 
             Trix::make(__('Content'), 'content')
-                ->withFiles('public')
+                ->withFiles(config('pagemanager.images_disk'))
                 ->hideFromIndex(),
 
             Text::make(__('Meta title'), 'meta_title')
